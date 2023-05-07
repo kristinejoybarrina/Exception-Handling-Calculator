@@ -5,40 +5,51 @@
 
 # Create a working simple calculator function that will serve as the basis only for creating functions inside tkinter
 
+# Initialize Variables
+user_loop_response = "y"
+
+while user_loop_response == "y":
+
 #    Ask the user what operation he/she would like to use
-print ("Select an operation. Type number only. \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division")
+    print ("Select an operation. Type number only. \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division")
 
-operation_input = int(input("Select operator: "))
-    
-# Let the user input the first input
-first_input = int(input("Enter first input: "))
+    operation_input = int(input("Select operator: "))
+        
+    # Let the user input the first input
+    first_input = int(input("Enter first input: "))
 
-# Let the user input the second input
-second_input = int(input("Enter second input: "))
+    # Let the user input the second input
+    second_input = int(input("Enter second input: "))
 
-# Addition operation
-if operation_input == 1:
-    sum = (first_input + second_input)
-    print (sum)
-    
-# Subtraction operation
-elif operation_input == 2:
-    difference = (first_input - second_input)
-    print (difference)
-    
-# Multiplication operation
-elif operation_input == 3:
-    product = (first_input * second_input)
-    print (product)
+    # Addition operation
+    if operation_input == 1:
+        sum = (first_input + second_input)
+        
+    #   Display output considering the operation that the user chose
+        print (sum)
+        
+    # Subtraction operation
+    elif operation_input == 2:
+        difference = (first_input - second_input)
+        print (difference)
+        
+    # Multiplication operation
+    elif operation_input == 3:
+        product = (first_input * second_input)
+        print (product)
 
-else:
-    quotient = (first_input / second_input)
-    print (quotient)
+    else:
+        quotient = (first_input / second_input)
+        print (quotient)
+
+    # Ask the user if he/she wants to try again
+    user_loop_response = str(input("Do you want to try again? y/n: ")).lower()
+
+print ("Thank you")
 
     # Display error message if the user entered a string
     # Display an error message if the user inputs a zero in 2nd input
-    # Display output considering the operation that the user chose
-    # Ask the user if he/she wants to try again
+
     
 # Based on the created simple calculator program, create a GUI using tkinter
 # Define a function called First_Window
