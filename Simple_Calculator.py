@@ -16,6 +16,9 @@ first_input = int(input("Enter first input: "))
 print (first_input)
 
 # Let the user input the second input
+second_input = int(input("Enter second input: "))
+print (second_input)
+
     # Display error message if the user entered a string
     # Display an error message if the user inputs a zero in 2nd input
     # Display output considering the operation that the user chose
