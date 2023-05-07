@@ -12,7 +12,8 @@ operation_input = int(input("Select operator: "))
 print (operation_input)
     
 # Let the user input the first input
-
+first_input = int(input("Enter first input: "))
+print (first_input)
 
 # Let the user input the second input
     # Display error message if the user entered a string
