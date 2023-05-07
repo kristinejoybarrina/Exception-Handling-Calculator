@@ -9,15 +9,20 @@
 print ("Select an operation. Type number only. \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division")
 
 operation_input = int(input("Select operator: "))
-print (operation_input)
     
 # Let the user input the first input
 first_input = int(input("Enter first input: "))
-print (first_input)
 
 # Let the user input the second input
 second_input = int(input("Enter second input: "))
-print (second_input)
+
+# Add if-else for each operation
+if operation_input == 1:
+    sum = (first_input + second_input)
+    print (sum)
+    
+else:
+    ("okay")
 
     # Display error message if the user entered a string
     # Display an error message if the user inputs a zero in 2nd input
