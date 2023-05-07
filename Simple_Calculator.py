@@ -4,9 +4,17 @@
 # PSEUDOCODE
 
 # Create a working simple calculator function that will serve as the basis only for creating functions inside tkinter
-    # Ask the user what operation he/she would like to use
-    # Let the user input the first input
-    # Let the user input the second input
+
+#    Ask the user what operation he/she would like to use
+print ("Select an operation. Type number only. \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division")
+
+operation_input = int(input("Select operator: "))
+print (operation_input)
+    
+# Let the user input the first input
+
+
+# Let the user input the second input
     # Display error message if the user entered a string
     # Display an error message if the user inputs a zero in 2nd input
     # Display output considering the operation that the user chose
