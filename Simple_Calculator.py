@@ -25,6 +25,10 @@ elif operation_input == 2:
     difference = (first_input - second_input)
     print (difference)
 
+elif operation_input == 3:
+    product = (first_input * second_input)
+    print (product)
+
 else:
     ("okay")
 
