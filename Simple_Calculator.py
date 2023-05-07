@@ -32,7 +32,8 @@ elif operation_input == 3:
     print (product)
 
 else:
-    ("okay")
+    quotient = (first_input / second_input)
+    print (quotient)
 
     # Display error message if the user entered a string
     # Display an error message if the user inputs a zero in 2nd input
