@@ -21,6 +21,10 @@ if operation_input == 1:
     sum = (first_input + second_input)
     print (sum)
     
+elif operation_input == 2:
+    difference = (first_input - second_input)
+    print (difference)
+
 else:
     ("okay")
 
