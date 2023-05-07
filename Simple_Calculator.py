@@ -16,15 +16,17 @@ first_input = int(input("Enter first input: "))
 # Let the user input the second input
 second_input = int(input("Enter second input: "))
 
-# Add if-else for each operation
+# Addition operation
 if operation_input == 1:
     sum = (first_input + second_input)
     print (sum)
     
+# Subtraction operation
 elif operation_input == 2:
     difference = (first_input - second_input)
     print (difference)
-
+    
+# Multiplication operation
 elif operation_input == 3:
     product = (first_input * second_input)
     print (product)
