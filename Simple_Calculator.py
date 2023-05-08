@@ -286,16 +286,16 @@ def First_Window():
     addition_button.pack()
     
     # Create addition operation button
-    addition_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
-    addition_button.pack()
+    subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
+    subtraction_button.pack()
     
     # Create addition operation button
-    addition_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
-    addition_button.pack()
+    multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
+    multiplication_button.pack()
 
     # Create addition operation button
-    addition_button = Button(root, text="Division", bg="black", fg="white", command=Division)
-    addition_button.pack()
+    division_button = Button(root, text="Division", bg="black", fg="white", command=Division)
+    division_button.pack()
 
     root.mainloop()
 
