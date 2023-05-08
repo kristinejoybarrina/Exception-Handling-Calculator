@@ -4,6 +4,7 @@
 # PSEUDOCODE
 
 # Create a working simple calculator function that will serve as the basis only for creating functions inside tkinter
+from tkinter import *
 
 # Initialize Variables
 user_loop_response = "y"
@@ -63,30 +64,36 @@ print ("Thank you")
 
 # Based on the created simple calculator program, create a GUI using tkinter
 
-# Create a window
-from tkinter import *
-
-root = Tk()
-root.geometry("450x200")
-root.configure(bg="gray")
-root.title("Calculator")
-
-# Create label for direction
-direction_label = Label(root, text="Select an operation", bg="gray", fg="black", font=("Arial", 16, "bold"))
-direction_label.pack()
-
-# Create close button
-close_button = Button(root, text="Close", bg="red", fg="white", command=root.destroy)
-close_button.pack(side="bottom")
-
 # Define a function called First_Window
-# Add labels and buttons to First_Window
-# Define functions for each operator
-# Add labels, button, and text box to each function
-# Ask user for 1st input
-# Ask user for 2nd input
-# Apply the operation to the inputs
-# Display output
-# Display error message
+def First_Window():
 
-root.mainloop()
+    # Create a window
+
+    root = Tk()
+    root.geometry("450x200")
+    root.configure(bg="gray")
+    root.title("Calculator")
+
+    # Create label for direction
+    direction_label = Label(root, text="Select an operation", bg="gray", fg="black", font=("Arial", 16, "bold"))
+    direction_label.pack()
+
+    # Create close button
+    close_button = Button(root, text="Close", bg="red", fg="white", command=root.destroy)
+    close_button.pack(side="bottom")
+
+
+
+
+    # Add labels and buttons to First_Window
+    # Define functions for each operator
+    # Add labels, button, and text box to each function
+    # Ask user for 1st input
+    # Ask user for 2nd input
+    # Apply the operation to the inputs
+    # Display output
+    # Display error message
+
+    root.mainloop()
+
+First_Window()
