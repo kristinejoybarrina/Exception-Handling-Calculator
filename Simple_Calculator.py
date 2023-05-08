@@ -18,7 +18,6 @@ def First_Window():
     
     # Define function and create window for addition operation 
     def Addition():
-        
         addition_window = Tk()
         addition_window.title("Addition")
         addition_window.geometry("450x200")
@@ -68,7 +67,6 @@ def First_Window():
         
     # Define function and create window for subtraction operation 
     def Subtraction():
-        
         subtraction_window = Tk()
         subtraction_window.title("Subtraction")
         subtraction_window.geometry("450x200")
@@ -119,7 +117,6 @@ def First_Window():
         
     # Define function and create window for multiplication operation 
     def Multiplication():
-        
         multiplication_window = Tk()
         multiplication_window.title("Multiplication")
         multiplication_window.geometry("450x200")
@@ -169,7 +166,6 @@ def First_Window():
 
     # Define function and create window for division operation 
     def Division():
-        
         division_window = Tk()
         division_window.title("Division")
         division_window.geometry("450x200")
