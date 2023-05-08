@@ -61,12 +61,13 @@ while user_loop_response == "y":
         
 print ("Thank you")
 
-
-
-
-
-    
 # Based on the created simple calculator program, create a GUI using tkinter
+
+from tkinter import *
+
+root = Tk()
+
+
 # Define a function called First_Window
 # Add labels and buttons to First_Window
 # Define functions for each operator
@@ -76,3 +77,5 @@ print ("Thank you")
 # Apply the operation to the inputs
 # Display output
 # Display error message
+
+root.mainloop()
