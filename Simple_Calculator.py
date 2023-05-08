@@ -86,7 +86,12 @@ def First_Window():
         first_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         first_input_textbox.grid(row=1, column=20)
         
+        # Create textbox for second input
+        second_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
+        second_input_textbox.grid(row=2, column=20)
+        
         addition_window.mainloop()
+        
         
     # Create a window
 
