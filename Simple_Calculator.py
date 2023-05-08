@@ -52,16 +52,18 @@ while user_loop_response == "y":
         user_loop_response = "y"
         print ("Enter an integer!")
 
-       
 
+    # Display an error message if the user inputs a zero in 2nd input
 
-
+    except ZeroDivisionError:
+        user_loop_response = "y"
+        print ("The second input must not be equal to zero! Please try again.")
+        
 print ("Thank you")
 
 
 
 
-    # Display an error message if the user inputs a zero in 2nd input
 
     
 # Based on the created simple calculator program, create a GUI using tkinter
