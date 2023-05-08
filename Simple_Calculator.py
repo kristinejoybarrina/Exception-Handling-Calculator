@@ -66,7 +66,14 @@ print ("Thank you")
 
 # Define a function called First_Window
 def First_Window():
-
+    
+    # Define function and create window for addition operation 
+    def Addition():
+        addition_window = Tk()
+        addition_window.title("Addition")
+        addition_window.geometry("450x200")
+        addition_window.config(bg="gray")
+        
     # Create a window
 
     root = Tk()
@@ -83,7 +90,7 @@ def First_Window():
     close_button.pack(side="bottom")
 
     # Create addition operation button
-    addition_button = Button(root, text="Addition", bg="black", fg="white", command=root.destroy)
+    addition_button = Button(root, text="Addition", bg="black", fg="white", command=Addition)
     addition_button.pack()
     
 
