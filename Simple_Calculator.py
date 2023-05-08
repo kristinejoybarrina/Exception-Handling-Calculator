@@ -66,6 +66,9 @@ print ("Thank you")
 from tkinter import *
 
 root = Tk()
+root.geometry("450x200")
+root.configure(bg="gray")
+root.title("Calculator")
 
 
 # Define a function called First_Window
