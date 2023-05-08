@@ -165,7 +165,6 @@ def First_Window():
         
         subtraction_window.mainloop()
 
-
     # Create a window
 
     root = Tk()
