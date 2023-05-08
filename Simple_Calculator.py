@@ -114,10 +114,58 @@ def First_Window():
         back_button = Button(addition_window, text="Back", bg="red", fg="white", command=addition_window.destroy)
         back_button.grid(row=5, column=50, sticky=W)
         
-        
         addition_window.mainloop()
         
+    # Define function and create window for addition operation 
+    def Subtraction():
+        subtraction_window = Tk()
+        subtraction_window.title("Subtraction")
+        subtraction_window.geometry("450x200")
+        subtraction_window.config(bg="gray")
         
+        # Create label for first input
+        first_input_label = Label(subtraction_window, text="First input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        first_input_label.grid(row=1, column=5, pady=15)
+        
+        # Create label for second input
+        second_input_label = Label(subtraction_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        second_input_label.grid(row=2, column=5, pady=15)
+        
+        # Create textbox for first input
+        first_input_textbox = Entry(subtraction_window, fg="black", font=("Arial", 12, "bold"))
+        first_input_textbox.grid(row=1, column=20)
+        
+        # Create textbox for second input
+        second_input_textbox = Entry(subtraction_window, fg="black", font=("Arial", 12, "bold"))
+        second_input_textbox.grid(row=2, column=20)
+        
+        # Define function to apply addition operation
+        def difference():
+            
+            # Use try-catch to show error inputs
+            try:
+                
+                total = (int(first_input_textbox.get()) - int(second_input_textbox.get()))
+                empty_label.config(fg="black", text="Total: " + str(total))
+                
+            except ValueError:
+                empty_label.config(text="Please enter an integer!", fg="red") 
+        
+        # Create calculate button
+        calculate_button = Button(subtraction_window, command=difference, text="Calculate", fg="black", font=("Arial", 12, "bold"))
+        calculate_button.grid(row=5, column=20, sticky=W)
+        
+        # Create empty label to show total 
+        empty_label = Label(subtraction_window, fg="black", bg="gray", font=("Arial", 12, "bold"))
+        empty_label.grid(row=15, column=20, sticky=W)
+        
+        # Create back button
+        back_button = Button(subtraction_window, text="Back", bg="red", fg="white", command=subtraction_window.destroy)
+        back_button.grid(row=5, column=50, sticky=W)
+        
+        subtraction_window.mainloop()
+
+
     # Create a window
 
     root = Tk()
@@ -137,16 +185,10 @@ def First_Window():
     addition_button = Button(root, text="Addition", bg="black", fg="white", command=Addition)
     addition_button.pack()
     
+    # Create addition operation button
+    addition_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
+    addition_button.pack()
 
-
-    # Add labels and buttons to First_Window
-
-    # Add labels, button, and text box to each function
-    # Ask user for 1st input
-    # Ask user for 2nd input
-    # Apply the operation to the inputs
-    # Display output
-    # Display error message
 
     root.mainloop()
 
