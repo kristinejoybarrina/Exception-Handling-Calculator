@@ -95,6 +95,9 @@ def First_Window():
             total = (int(first_input_textbox.get()) + int(second_input_textbox.get()))
             empty_label.config(fg="black", text="Total: " + str(total))
         
+        # Create calculate button
+        calculate_button = Button(addition_window, command=sum, text="Calculate", fg="black", font=("Arial", 12, "bold"))
+        calculate_button.grid(row=5, column=20, sticky=W)
         
         # Create empty label to show total 
         empty_label = Label(addition_window, fg="black", bg="gray", font=("Arial", 12, "bold"))
