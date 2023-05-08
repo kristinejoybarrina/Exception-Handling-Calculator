@@ -90,9 +90,20 @@ def First_Window():
         second_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
+        # Define function to apply addition operation
+        def sum():
+            total = (int(first_input_textbox.get()) + int(second_input_textbox.get()))
+            empty_label.config(fg="black", text="Total: " + str(total))
+        
+        
+        # Create empty label to show total 
+        empty_label = Label(addition_window, fg="black", bg="gray", font=("Arial", 12, "bold"))
+        empty_label.grid(row=15, column=20, sticky=W)
+        
         # Create back button
         back_button = Button(addition_window, text="Back", bg="red", fg="white", command=addition_window.destroy)
         back_button.grid(row=5, column=50, sticky=W)
+        
         
         addition_window.mainloop()
         
