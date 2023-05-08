@@ -92,8 +92,15 @@ def First_Window():
         
         # Define function to apply addition operation
         def sum():
-            total = (int(first_input_textbox.get()) + int(second_input_textbox.get()))
-            empty_label.config(fg="black", text="Total: " + str(total))
+            
+            # Use try-catch to show error inputs
+            try:
+                
+                total = (int(first_input_textbox.get()) + int(second_input_textbox.get()))
+                empty_label.config(fg="black", text="Total: " + str(total))
+                
+            except ValueError:
+                empty_label.config(text="Please enter an integer!", fg="red") 
         
         # Create calculate button
         calculate_button = Button(addition_window, command=sum, text="Calculate", fg="black", font=("Arial", 12, "bold"))
