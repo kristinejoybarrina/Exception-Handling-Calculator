@@ -164,6 +164,56 @@ def First_Window():
         back_button.grid(row=5, column=50, sticky=W)
         
         subtraction_window.mainloop()
+        
+        
+    # Define function and create window for addition operation 
+    def Multiplication():
+        multiplication_window = Tk()
+        multiplication_window.title("Multiplication")
+        multiplication_window.geometry("450x200")
+        multiplication_window.config(bg="gray")
+        
+        # Create label for first input
+        first_input_label = Label(multiplication_window, text="First input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        first_input_label.grid(row=1, column=5, pady=15)
+        
+        # Create label for second input
+        second_input_label = Label(multiplication_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        second_input_label.grid(row=2, column=5, pady=15)
+        
+        # Create textbox for first input
+        first_input_textbox = Entry(multiplication_window, fg="black", font=("Arial", 12, "bold"))
+        first_input_textbox.grid(row=1, column=20)
+        
+        # Create textbox for second input
+        second_input_textbox = Entry(multiplication_window, fg="black", font=("Arial", 12, "bold"))
+        second_input_textbox.grid(row=2, column=20)
+        
+        # Define function to apply addition operation
+        def product():
+            
+            # Use try-catch to show error inputs
+            try:
+                
+                total = (int(first_input_textbox.get()) * int(second_input_textbox.get()))
+                empty_label.config(fg="black", text="Total: " + str(total))
+                
+            except ValueError:
+                empty_label.config(text="Please enter an integer!", fg="red") 
+        
+        # Create calculate button
+        calculate_button = Button(multiplication_window, command=product, text="Calculate", fg="black", font=("Arial", 12, "bold"))
+        calculate_button.grid(row=5, column=20, sticky=W)
+        
+        # Create empty label to show total 
+        empty_label = Label(multiplication_window, fg="black", bg="gray", font=("Arial", 12, "bold"))
+        empty_label.grid(row=15, column=20, sticky=W)
+        
+        # Create back button
+        back_button = Button(multiplication_window, text="Back", bg="red", fg="white", command=multiplication_window.destroy)
+        back_button.grid(row=5, column=50, sticky=W)
+        
+        multiplication_window.mainloop()
 
     # Create a window
 
@@ -186,6 +236,10 @@ def First_Window():
     
     # Create addition operation button
     addition_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
+    addition_button.pack()
+    
+    # Create addition operation button
+    addition_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
     addition_button.pack()
 
 
