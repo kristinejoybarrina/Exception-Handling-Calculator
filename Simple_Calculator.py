@@ -3,16 +3,22 @@
 
 # PSEUDOCODE
 
-# import tkinter module
-from tkinter import *
-
 # Create simple calculator program using GUI tkinter
+
+# import python module
+from tkinter import *
+import pyfiglet
+
+# Create notice text that the program starts
+notice_text = pyfiglet.figlet_format("Calculator", font="slant")
+print("\033[1;31m" + notice_text)
 
 # Define a function called First_Window
 def First_Window():
     
     # Define function and create window for addition operation 
     def Addition():
+        
         addition_window = Tk()
         addition_window.title("Addition")
         addition_window.geometry("450x200")
@@ -60,8 +66,9 @@ def First_Window():
         
         addition_window.mainloop()
         
-    # Define function and create window for addition operation 
+    # Define function and create window for subtraction operation 
     def Subtraction():
+        
         subtraction_window = Tk()
         subtraction_window.title("Subtraction")
         subtraction_window.geometry("450x200")
@@ -83,7 +90,7 @@ def First_Window():
         second_input_textbox = Entry(subtraction_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
-        # Define function to apply addition operation
+        # Define function to apply subtraction operation
         def difference():
             
             # Use try-catch to show error inputs
@@ -110,8 +117,9 @@ def First_Window():
         subtraction_window.mainloop()
         
         
-    # Define function and create window for addition operation 
+    # Define function and create window for multiplication operation 
     def Multiplication():
+        
         multiplication_window = Tk()
         multiplication_window.title("Multiplication")
         multiplication_window.geometry("450x200")
@@ -133,7 +141,7 @@ def First_Window():
         second_input_textbox = Entry(multiplication_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
-        # Define function to apply addition operation
+        # Define function to apply multiplication operation
         def product():
             
             # Use try-catch to show error inputs
@@ -158,8 +166,10 @@ def First_Window():
         back_button.grid(row=5, column=50, sticky=W)
         
         multiplication_window.mainloop()
-        
+
+    # Define function and create window for division operation 
     def Division():
+        
         division_window = Tk()
         division_window.title("Division")
         division_window.geometry("450x200")
@@ -181,7 +191,7 @@ def First_Window():
         second_input_textbox = Entry(division_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
-        # Define function to apply addition operation
+        # Define function to apply division operation
         def quotient():
             
             # Use try-catch to show error inputs
@@ -229,15 +239,15 @@ def First_Window():
     addition_button = Button(root, text="Addition", bg="black", fg="white", command=Addition)
     addition_button.pack()
     
-    # Create addition operation button
+    # Create subtraction operation button
     subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
     subtraction_button.pack()
     
-    # Create addition operation button
+    # Create multiplication operation button
     multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
     multiplication_button.pack()
 
-    # Create addition operation button
+    # Create division operation button
     division_button = Button(root, text="Division", bg="black", fg="white", command=Division)
     division_button.pack()
 
