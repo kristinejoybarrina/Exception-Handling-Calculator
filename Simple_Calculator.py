@@ -90,6 +90,10 @@ def First_Window():
         second_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
+        # Create back button
+        back_button = Button(addition_window, text="Back", bg="red", fg="white", command=addition_window.destroy)
+        back_button.grid(row=5, column=50, sticky=W)
+        
         addition_window.mainloop()
         
         
