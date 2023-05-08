@@ -75,6 +75,9 @@ root.title("Calculator")
 direction_label = Label(root, text="Select an operation", bg="gray", fg="black", font=("Arial", 16, "bold"))
 direction_label.pack()
 
+# Create close button
+close_button = Button(root, text="Close", bg="red", fg="white", command=root.destroy)
+close_button.pack(side="bottom")
 
 # Define a function called First_Window
 # Add labels and buttons to First_Window
