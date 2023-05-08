@@ -14,10 +14,10 @@ notice_text = pyfiglet.figlet_format("Calculator", font="slant")
 print("\033[1;31m" + notice_text)
 
 # Define a function called First_Window
-def First_Window():
+def first_window():
     
     # Define function and create window for addition operation 
-    def Addition():
+    def addition():
         addition_window = Tk()
         addition_window.title("Addition")
         addition_window.geometry("450x200")
@@ -45,7 +45,7 @@ def First_Window():
             # Use try-catch to show error inputs
             try:
                 
-                total = (int(first_input_textbox.get()) + int(second_input_textbox.get()))
+                total = (float(first_input_textbox.get()) + float(second_input_textbox.get()))
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -66,7 +66,7 @@ def First_Window():
         addition_window.mainloop()
         
     # Define function and create window for subtraction operation 
-    def Subtraction():
+    def subtraction():
         subtraction_window = Tk()
         subtraction_window.title("Subtraction")
         subtraction_window.geometry("450x200")
@@ -94,7 +94,7 @@ def First_Window():
             # Use try-catch to show error inputs
             try:
                 
-                total = (int(first_input_textbox.get()) - int(second_input_textbox.get()))
+                total = (float(first_input_textbox.get()) - float(second_input_textbox.get()))
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -116,7 +116,7 @@ def First_Window():
         
         
     # Define function and create window for multiplication operation 
-    def Multiplication():
+    def multiplication():
         multiplication_window = Tk()
         multiplication_window.title("Multiplication")
         multiplication_window.geometry("450x200")
@@ -144,7 +144,7 @@ def First_Window():
             # Use try-catch to show error inputs
             try:
                 
-                total = (int(first_input_textbox.get()) * int(second_input_textbox.get()))
+                total = (float(first_input_textbox.get()) * float(second_input_textbox.get()))
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -165,7 +165,7 @@ def First_Window():
         multiplication_window.mainloop()
 
     # Define function and create window for division operation 
-    def Division():
+    def division():
         division_window = Tk()
         division_window.title("Division")
         division_window.geometry("450x200")
@@ -187,13 +187,14 @@ def First_Window():
         second_input_textbox = Entry(division_window, fg="black", font=("Arial", 12, "bold"))
         second_input_textbox.grid(row=2, column=20)
         
+        
+        
         # Define function to apply division operation
         def quotient():
             
             # Use try-catch to show error inputs
             try:
-                
-                total = (int(first_input_textbox.get()) / int(second_input_textbox.get()))
+                total = (float(first_input_textbox.get()) / float(second_input_textbox.get()))
                 empty_label.config(fg="black", text="Total: " + str(total))
                 
             except ValueError:
@@ -232,21 +233,21 @@ def First_Window():
     close_button.pack(side="bottom")
 
     # Create addition operation button
-    addition_button = Button(root, text="Addition", bg="black", fg="white", command=Addition)
+    addition_button = Button(root, text="Addition", bg="black", fg="white", command=addition)
     addition_button.pack()
     
     # Create subtraction operation button
-    subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command=Subtraction)
+    subtraction_button = Button(root, text="Subtraction", bg="black", fg="white", command=subtraction)
     subtraction_button.pack()
     
     # Create multiplication operation button
-    multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
+    multiplication_button = Button(root, text="Multiplication", bg="black", fg="white", command=multiplication)
     multiplication_button.pack()
 
     # Create division operation button
-    division_button = Button(root, text="Division", bg="black", fg="white", command=Division)
+    division_button = Button(root, text="Division", bg="black", fg="white", command=division)
     division_button.pack()
 
     root.mainloop()
 
-First_Window()
+first_window()
