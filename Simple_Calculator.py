@@ -63,12 +63,17 @@ print ("Thank you")
 
 # Based on the created simple calculator program, create a GUI using tkinter
 
+# Create a window
 from tkinter import *
 
 root = Tk()
 root.geometry("450x200")
 root.configure(bg="gray")
 root.title("Calculator")
+
+# Create label for direction
+direction_label = Label(root, text="Select an operation", bg="gray", fg="black", font=("Arial", 16, "bold"))
+direction_label.pack()
 
 
 # Define a function called First_Window
