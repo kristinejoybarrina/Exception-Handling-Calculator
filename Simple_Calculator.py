@@ -214,6 +214,57 @@ def First_Window():
         back_button.grid(row=5, column=50, sticky=W)
         
         multiplication_window.mainloop()
+        
+    def Division():
+        division_window = Tk()
+        division_window.title("Division")
+        division_window.geometry("450x200")
+        division_window.config(bg="gray")
+        
+        # Create label for first input
+        first_input_label = Label(division_window, text="First input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        first_input_label.grid(row=1, column=5, pady=15)
+        
+        # Create label for second input
+        second_input_label = Label(division_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
+        second_input_label.grid(row=2, column=5, pady=15)
+        
+        # Create textbox for first input
+        first_input_textbox = Entry(division_window, fg="black", font=("Arial", 12, "bold"))
+        first_input_textbox.grid(row=1, column=20)
+        
+        # Create textbox for second input
+        second_input_textbox = Entry(division_window, fg="black", font=("Arial", 12, "bold"))
+        second_input_textbox.grid(row=2, column=20)
+        
+        # Define function to apply addition operation
+        def quotient():
+            
+            # Use try-catch to show error inputs
+            try:
+                
+                total = (int(first_input_textbox.get()) / int(second_input_textbox.get()))
+                empty_label.config(fg="black", text="Total: " + str(total))
+                
+            except ValueError:
+                empty_label.config(text="Please enter an integer!", fg="red") 
+                
+            except ZeroDivisionError:
+                empty_label.config(text="Zero division error! \n Please try again.", fg="red") 
+        
+        # Create calculate button
+        calculate_button = Button(division_window, command=quotient, text="Calculate", fg="black", font=("Arial", 12, "bold"))
+        calculate_button.grid(row=5, column=20, sticky=W)
+        
+        # Create empty label to show total 
+        empty_label = Label(division_window, fg="black", bg="gray", font=("Arial", 12, "bold"))
+        empty_label.grid(row=15, column=20, sticky=W)
+        
+        # Create back button
+        back_button = Button(division_window, text="Back", bg="red", fg="white", command=division_window.destroy)
+        back_button.grid(row=5, column=50, sticky=W)
+        
+        division_window.mainloop()
 
     # Create a window
 
@@ -242,6 +293,9 @@ def First_Window():
     addition_button = Button(root, text="Multiplication", bg="black", fg="white", command=Multiplication)
     addition_button.pack()
 
+    # Create addition operation button
+    addition_button = Button(root, text="Division", bg="black", fg="white", command=Division)
+    addition_button.pack()
 
     root.mainloop()
 
