@@ -75,12 +75,16 @@ def First_Window():
         addition_window.config(bg="gray")
         
         # Create label for first input
-        first_input_label = Label(addition_window, text="First input:", fg="black", bg="gray", font=("Arial", 16, "bold"))
+        first_input_label = Label(addition_window, text="First input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
         first_input_label.grid(row=1, column=5, pady=15)
         
         # Create label for second input
-        second_input_label = Label(addition_window, text="Second input:", fg="black", bg="gray", font=("Arial", 16, "bold"))
+        second_input_label = Label(addition_window, text="Second input:", fg="black", bg="gray", font=("Arial", 12, "bold"))
         second_input_label.grid(row=2, column=5, pady=15)
+        
+        # Create textbox for first input
+        first_input_textbox = Entry(addition_window, fg="black", font=("Arial", 12, "bold"))
+        first_input_textbox.grid(row=1, column=20)
         
         addition_window.mainloop()
         
