@@ -82,11 +82,14 @@ def First_Window():
     close_button = Button(root, text="Close", bg="red", fg="white", command=root.destroy)
     close_button.pack(side="bottom")
 
-
+    # Create addition operation button
+    addition_button = Button(root, text="Addition", bg="black", fg="white", command=root.destroy)
+    addition_button.pack()
+    
 
 
     # Add labels and buttons to First_Window
-    # Define functions for each operator
+
     # Add labels, button, and text box to each function
     # Ask user for 1st input
     # Ask user for 2nd input
